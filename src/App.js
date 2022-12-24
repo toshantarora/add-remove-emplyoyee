@@ -36,7 +36,7 @@ function App() {
             width: "500px",
           }}
         >
-          <TeamMembers addTeam={addTeam} disabled={disabled} setDisabled={setDisabled}  setAddTeam={setAddTeam}/>
+          <TeamMembers addTeam={addTeam} disabled={disabled} setAddTeam={setAddTeam}/>
         </div>
       </div>
     </div>

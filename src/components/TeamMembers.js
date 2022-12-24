@@ -24,11 +24,18 @@ const TeamMembers = (props) => {
     props.addTeam.sort((a, b) => a.age - b.age);
   };
 
+  function removeItem(array, item) {
+    for (let i in array) {
+      if (array[i] === item) {
+        array.splice(i, 1);
+        break;
+      }
+    }
+  }
   const onRemoveClick = (id) => {
     const removed = props.addTeam.filter((item) => item.id !== id);
     props.setAddTeam(removed);
-    const removeDisabled = props.disabled.filter((item) => item.id !== id);
-    props.setDisabled(removeDisabled);
+    removeItem(props.disabled, id);
   };
 
   return (

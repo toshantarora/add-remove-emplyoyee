@@ -2,13 +2,14 @@ import React from "react";
 import { employees } from "../constant/Data";
 
 const EmployeeCard = (props) => {
+
   const onAddClick = (data) => {
     const arr = [];
-
     arr.push(data);
     props.setAddTeam((prev) => [...prev, ...arr]);
     props?.setDisabled((prev) => [...prev, data.id]);
   };
+
   return (
     <div
       style={{
